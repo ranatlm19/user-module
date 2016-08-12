@@ -2,7 +2,7 @@ $(document).ready(function() {
 	// Opens pop-up to add new user
 	$('.add-new-user-btn').click(function(event){
 		var new_user_name = $("#new-user-name").val();
-		if(validate_name(new_user_name)) {
+		if(validate_name(new_user_name) && new_user_name.length>=3) {
 			var new_user_data = {
 				'user_name': new_user_name
 			};
@@ -18,15 +18,18 @@ $(document).ready(function() {
 						bootbox.alert(new_user_name + " added successfully!");
 						$("#addNewUserModal").modal("hide");
 						$("#list-users").append(new_user_html_element);
-						return;
 					}
-					bootbox.alert("Unable to add " + new_user_name);
+					else {
+						bootbox.alert("Unable to add " + new_user_name);
+					}
 				},
 				error: function(err) {
 					$("#add-new-user-modal-message").hide();
 					bootbox.alert("Error : " + err);
 				}
 			});
+		} else {
+			bootbox.alert("User name should contain only alphabets and spaces with minimum length of 3");
 		}
 	}); 
 	$("#reporting-user").keyup(function(e) {
@@ -129,7 +132,14 @@ $(document).ready(function() {
 						bootbox.alert(err);
 					}
 				});
+			} else {
+				bootbox.alert("User name doesn't match any options");
 			}
+		} else {
+			if(search_text.length < 2)
+				bootbox.alert("Minimum length of search should be 2");
+			else
+				bootbox.alert("Enter a valid name");
 		}
 	});
 	$("#add-user-rep").click(function(){
@@ -174,7 +184,14 @@ $(document).ready(function() {
 						bootbox.alert(err);
 					}
 				});
+			} else {
+				bootbox.alert("User name doesn't match any options");
 			}
+		} else {
+			if(search_text.length < 2)
+				bootbox.alert("Minimum length of search should be 2");
+			else
+				bootbox.alert("Enter a valid name");
 		}
 	});
 });
@@ -270,18 +287,24 @@ function openModal(event) {
 								$("#current_user_name").val(user_name);
 
 								$("#reporting-rights-modal").modal("show");
+							} else {
+								bootbox.alert("Error - Can't show reporting rights");
 							}
 						},
 						error: function(err) {
 							bootbox.alert("Error : " + err);
 						}
 					});
+				} else {
+					bootbox.alert("Error - Can't show reporting rights");
 				}
 			},
 			error: function(err) {
 				bootbox.alert("Error : " + err);
 			}
 		});
+	} else {
+		bootbox.alert("Can't show reporting rights");
 	}
 }
 
