@@ -1133,6 +1133,7 @@ e2bbe4,127.0.0.1,POST,http://localhost:8000/getReportingFrom/,1471030994,,200
 4aea1a,127.0.0.1,POST,http://localhost:8000/searchNewUsersToReport/,1471030997,,200
 ecd1b6,127.0.0.1,POST,http://localhost:8000/searchNewUsersToReport/,1471030997,,200
 d0f7ce,127.0.0.1,POST,http://localhost:8000/addNewRelationship/,1471030999,,200
+<<<<<<< HEAD
 35f4e7,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.com:8080/,1471035550,,200
 1fc6ca,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.com:8080/listUsers/,1471035559,,302
 ccd866,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.com:8080/listUsers/1,1471035559,62c19e,200
@@ -1156,3 +1157,27 @@ bb77e9,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.c
 f9e50f,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.com:8080/listUsers/1,1471040123,,200
 b6cff5,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.com:8080/listUsers/2,1471040125,,200
 c578c4,116.75.95.135,GET,http://ec2-52-66-110-246.ap-south-1.compute.amazonaws.com:8080/listUsers/1,1471040126,,200
+=======
+eaf01c,127.0.0.1,GET,http://localhost:8000/listUsers/,1471033602,,302
+5111a6,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471033602,,200
+0c6d5c,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039641,,200
+5620ce,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039668,,200
+61904d,127.0.0.1,POST,http://localhost:8000/addNewUser/,1471039681,,200
+b3229f,127.0.0.1,POST,http://localhost:8000/addNewUser/,1471039693,,200
+ea03ff,127.0.0.1,POST,http://localhost:8000/addNewUser/,1471039703,,200
+89c52c,127.0.0.1,POST,http://localhost:8000/addNewUser/,1471039725,,200
+cff28a,127.0.0.1,POST,http://localhost:8000/addNewUser/,1471039734,,200
+d30d6c,127.0.0.1,GET,http://localhost:8000/listUsers/2,1471039737,,200
+a1e4ae,127.0.0.1,GET,http://localhost:8000/listUsers/3,1471039739,,302
+9259e1,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039740,,200
+114ab8,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039899,1c31f7,200
+1c31f7,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039899,,500
+4358b3,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039952,3cd9c8,200
+3cd9c8,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039952,,500
+72f17d,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039962,,200
+a5b693,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039987,,200
+d3b854,127.0.0.1,GET,http://localhost:8000/listUsers/2,1471039990,,200
+675f4b,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039991,,200
+357ef1,127.0.0.1,GET,http://localhost:8000/listUsers/2,1471039994,,200
+30666b,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471039998,,200
+>>>>>>> 16a46fdc64b448366d3cb5d1dbcb4d3a532fa959

@@ -493,8 +493,13 @@
                   <tag name="cache.pool"/>
                   <argument>uidFddG2xG</argument>
                   <argument></argument>
+<<<<<<< HEAD
                   <argument>4YOBxASlEv0ke6eYvJzekQ</argument>
                   <argument>/home/ubuntu/Projects/user-module/var/cache/dev/pools</argument>
+=======
+                  <argument>Qns-6Fff3-6UqTylOvy7yw</argument>
+                  <argument>/Users/ranatlm19/Documents/symfony-workspace/User-module/user-module/var/cache/dev/pools</argument>
+>>>>>>> 16a46fdc64b448366d3cb5d1dbcb4d3a532fa959
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
                 </service>
@@ -506,8 +511,13 @@
                   <tag name="cache.pool"/>
                   <argument>nlPlSsXGSV</argument>
                   <argument></argument>
+<<<<<<< HEAD
                   <argument>4YOBxASlEv0ke6eYvJzekQ</argument>
                   <argument>/home/ubuntu/Projects/user-module/var/cache/dev/pools</argument>
+=======
+                  <argument>Qns-6Fff3-6UqTylOvy7yw</argument>
+                  <argument>/Users/ranatlm19/Documents/symfony-workspace/User-module/user-module/var/cache/dev/pools</argument>
+>>>>>>> 16a46fdc64b448366d3cb5d1dbcb4d3a532fa959
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
                 </service>
@@ -838,8 +848,13 @@
       <tag name="cache.pool"/>
       <argument>s1HvgBzapq</argument>
       <argument></argument>
+<<<<<<< HEAD
       <argument>4YOBxASlEv0ke6eYvJzekQ</argument>
       <argument>/home/ubuntu/Projects/user-module/var/cache/dev/pools</argument>
+=======
+      <argument>Qns-6Fff3-6UqTylOvy7yw</argument>
+      <argument>/Users/ranatlm19/Documents/symfony-workspace/User-module/user-module/var/cache/dev/pools</argument>
+>>>>>>> 16a46fdc64b448366d3cb5d1dbcb4d3a532fa959
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1574,7 +1589,11 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+<<<<<<< HEAD
             <argument>57ae4589dc4770.37838943</argument>
+=======
+            <argument>57ae4895757111.61675925</argument>
+>>>>>>> 16a46fdc64b448366d3cb5d1dbcb4d3a532fa959
           </service>
         </argument>
       </argument>
@@ -1708,7 +1727,11 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
+<<<<<<< HEAD
             <argument>57ae4589dc4770.37838943</argument>
+=======
+            <argument>57ae4895757111.61675925</argument>
+>>>>>>> 16a46fdc64b448366d3cb5d1dbcb4d3a532fa959
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

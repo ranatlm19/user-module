@@ -15,10 +15,14 @@ $(document).ready(function() {
 					if(recdata['added']) {
 						var new_user_html_element = create_new_user_element(new_user_name, recdata['added']);
 						$("#add-new-user-modal-message").hide();
-						bootbox.alert(new_user_name + " added successfully!");
 						$("#new-user-name").val("");
 						$("#addNewUserModal").modal("hide");
-						$("#list-users").append(new_user_html_element);
+						var ul_list_of_users = document.getElementById("list-users");
+						var list_elems = ul_list_of_users.getElementsByClassName("list-group-item");
+						if(list_elems.length<5) {
+							$("#list-users").append(new_user_html_element);
+						}
+						bootbox.alert(new_user_name + " added successfully!");
 					}
 					else {
 						bootbox.alert("Unable to add " + new_user_name);

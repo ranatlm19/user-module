@@ -47,7 +47,11 @@
 						{% else %}
 						<a href="#" class="btn btn-default btn-sm disabled" role="button">Prev</a>
 						{% endif %}
+						{% if all_users|length < 5 %}
+						<a href="#" class="btn btn-default btn-sm disabled" role="button">Next</a>
+						{% else %}
 						<a href="/listUsers/{{ (page_no + 1) }}" class="btn btn-default btn-sm" role="button">Next</a>
+						{% endif %}
 					</div>
 				</div>
 			</div>
