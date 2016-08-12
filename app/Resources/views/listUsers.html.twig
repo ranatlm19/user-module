@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="/web/bundles/framework/css/style.css"> -->
+	<link rel="stylesheet" href="{{ asset('bundles/framework/css/style.css') }}">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+	<script src="{{ asset('bundles/framework/js/utility.js') }}"></script>
+
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Module</title>
+</head>
+<body>
+	<div class="container">
+		<h1>User Module</h1>
+		<div class="panel panel-primary col-sm-8 nopadding">
+			<div class="panel-heading">All Users</div>
+			<div class="panel-body">
+				<ul class="list-group" id="list-users">
+					{% for item in all_users %}
+					<li class="list-group-item">
+						<div class="row">
+							<div class="col-sm-8"> {{ item.user_name }} </div>
+							<input type="hidden" value="{{ item.user_id }}" class="this-user-id">
+							<input type="hidden" value="{{ item.user_name }}" class="this-user-name">
+							<div class="col-sm-4"> <a href="#" onclick="openModal(event)">Reporting Rights</a> </div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<div class="row">
+					<div class="col-sm-2">
+						<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNewUserModal">Add user</button>
+					</div>
+					<div class="col-sm-7"></div>
+					<div class="col-sm-3">
+						{% if page_no > 1 %}
+						<a href="/listUsers/{{ (page_no - 1) }}" class="btn btn-default btn-sm" role="button">Prev</a>
+						{% else %}
+						<a href="#" class="btn btn-default btn-sm disabled" role="button">Prev</a>
+						{% endif %}
+						<a href="/listUsers/{{ (page_no + 1) }}" class="btn btn-default btn-sm" role="button">Next</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="addNewUserModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add a new user</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="new-user-name" name="new-user-name" placeholder="Enter name" required>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<span class="glyphicon glyphicon-cloud-upload" id="add-new-user-modal-message"> Wait...</span>
+						<button type="button" class="btn btn-primary add-new-user-btn" id="add-new-user-btn">Save</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="reporting-rights-modal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Reporting Rights</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="hidden" id="current_user_id" value="-1">
+							<input type="hidden" id="current_user_name" value="-1">
+							<div class="panel panel-success">
+								<div class="panel-heading" id="report-to-heading">People reporting to you</div>
+								<div class="panel-body">
+									<ul class="list-group" id="reporting-to-user-list">
+									</ul>
+									<div class="col-xs-8">
+										<label for="reporting-user" id="report-to-label">Add people reporting to User</label>
+										<div class="row">
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="reporting-user" list="rep-user-list">
+												<datalist id="rep-user-list">
+												</datalist>
+											</div>
+											<div class="col-sm-3">
+												<button type="button" class="btn btn-primary" id="add-rep-user">Add</button>
+											</div>
+										</div>
+										<ul class=""></ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-info">
+								<div class="panel-heading" id="user-report-to-heading">People you report to</div>
+								<div class="panel-body">
+									<ul class="list-group" id="user-reports-to-list">
+
+									</ul>
+									<div class="col-xs-8">
+										<label for="reporting-to-user" id="user-report-to-label">Add people User reports to</label>
+										<div class="row">
+											<div class="col-sm-9">
+												<input type="text" class="form-control" id="reporting-to-user" list="user-rep-list">
+												<datalist id="user-rep-list">
+												</datalist>
+											</div>
+											<div class="col-sm-3">
+												<button type="button" class="btn btn-primary" id="add-user-rep">Add</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+	</html>
