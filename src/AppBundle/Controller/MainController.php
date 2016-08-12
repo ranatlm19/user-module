@@ -33,7 +33,7 @@ class MainController extends Controller {
         $curr_page = (int) $page_no;
         $conn = $this->get('database_connection');
         $all_users = $conn->fetchAll("select * from User limit ".($records_per_page * ($curr_page-1)).", ".$records_per_page);
-        if(count($all_users) == 0) {
+        if(count($all_users) == 0 && $page_no>1) {
             return $this->redirect('/listUsers/1');
         }
 

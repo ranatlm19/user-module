@@ -16,6 +16,7 @@ $(document).ready(function() {
 						var new_user_html_element = create_new_user_element(new_user_name, recdata['added']);
 						$("#add-new-user-modal-message").hide();
 						bootbox.alert(new_user_name + " added successfully!");
+						$("#new-user-name").val("");
 						$("#addNewUserModal").modal("hide");
 						$("#list-users").append(new_user_html_element);
 					}
