@@ -42,16 +42,8 @@
 					</div>
 					<div class="col-sm-7"></div>
 					<div class="col-sm-3">
-						{% if page_no > 1 %}
-						<a href="/listUsers/{{ (page_no - 1) }}" class="btn btn-default btn-sm" role="button">Prev</a>
-						{% else %}
-						<a href="#" class="btn btn-default btn-sm disabled" role="button">Prev</a>
-						{% endif %}
-						{% if all_users|length < 5 %}
-						<a href="#" class="btn btn-default btn-sm disabled" role="button">Next</a>
-						{% else %}
-						<a href="/listUsers/{{ (page_no + 1) }}" class="btn btn-default btn-sm" role="button">Next</a>
-						{% endif %}
+						<a href="/listUsers/{{ (page_no - 1) }}" class="btn btn-default btn-sm{% if page_no == 1 %} disabled{% endif %}" role="button">Prev</a>
+						<a href="/listUsers/{{ (page_no + 1) }}" class="btn btn-default btn-sm{% if all_users|length < 5 %} disabled{% endif %}" role="button" id="next-btn">Next</a>
 					</div>
 				</div>
 			</div>

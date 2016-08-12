@@ -22,6 +22,12 @@ $(document).ready(function() {
 						if(list_elems.length<5) {
 							$("#list-users").append(new_user_html_element);
 						}
+						else {
+							var next_btn = document.getElementById("next-btn");
+							if(next_btn.classList.contains("disabled")) {
+								next_btn.classList.remove("disabled");
+							}
+						}
 						bootbox.alert(new_user_name + " added successfully!");
 					}
 					else {

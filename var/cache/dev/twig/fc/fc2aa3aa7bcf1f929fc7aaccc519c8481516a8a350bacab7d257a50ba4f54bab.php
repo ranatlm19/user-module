@@ -15,8 +15,8 @@ class __TwigTemplate_1b2db2e3ed10ee0771c0a5bb70cf1a8a3929c78861db1339c0fb2f577d2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d50a518968bb84c369734dcf2bc4de25d2f86d2d9cd2d01d97316a6a3858251e = $this->env->getExtension("native_profiler");
-        $__internal_d50a518968bb84c369734dcf2bc4de25d2f86d2d9cd2d01d97316a6a3858251e->enter($__internal_d50a518968bb84c369734dcf2bc4de25d2f86d2d9cd2d01d97316a6a3858251e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "listUsers.html.twig"));
+        $__internal_9126296f19f15491e4537b9a36b18cfd86071218b4e7ebd1892617e15a9dbfed = $this->env->getExtension("native_profiler");
+        $__internal_9126296f19f15491e4537b9a36b18cfd86071218b4e7ebd1892617e15a9dbfed->enter($__internal_9126296f19f15491e4537b9a36b18cfd86071218b4e7ebd1892617e15a9dbfed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "listUsers.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -88,34 +88,23 @@ class __TwigTemplate_1b2db2e3ed10ee0771c0a5bb70cf1a8a3929c78861db1339c0fb2f577d2
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-sm-7\"></div>
 \t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t";
+\t\t\t\t\t\t<a href=\"/listUsers/";
         // line 45
-        if (((isset($context["page_no"]) ? $context["page_no"] : $this->getContext($context, "page_no")) > 1)) {
-            // line 46
-            echo "\t\t\t\t\t\t<a href=\"/listUsers/";
-            echo twig_escape_filter($this->env, ((isset($context["page_no"]) ? $context["page_no"] : $this->getContext($context, "page_no")) - 1), "html", null, true);
-            echo "\" class=\"btn btn-default btn-sm\" role=\"button\">Prev</a>
-\t\t\t\t\t\t";
-        } else {
-            // line 48
-            echo "\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-default btn-sm disabled\" role=\"button\">Prev</a>
-\t\t\t\t\t\t";
+        echo twig_escape_filter($this->env, ((isset($context["page_no"]) ? $context["page_no"] : $this->getContext($context, "page_no")) - 1), "html", null, true);
+        echo "\" class=\"btn btn-default btn-sm";
+        if (((isset($context["page_no"]) ? $context["page_no"] : $this->getContext($context, "page_no")) == 1)) {
+            echo " disabled";
         }
-        // line 50
-        echo "\t\t\t\t\t\t";
+        echo "\" role=\"button\">Prev</a>
+\t\t\t\t\t\t<a href=\"/listUsers/";
+        // line 46
+        echo twig_escape_filter($this->env, ((isset($context["page_no"]) ? $context["page_no"] : $this->getContext($context, "page_no")) + 1), "html", null, true);
+        echo "\" class=\"btn btn-default btn-sm";
         if ((twig_length_filter($this->env, (isset($context["all_users"]) ? $context["all_users"] : $this->getContext($context, "all_users"))) < 5)) {
-            // line 51
-            echo "\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-default btn-sm disabled\" role=\"button\">Next</a>
-\t\t\t\t\t\t";
-        } else {
-            // line 53
-            echo "\t\t\t\t\t\t<a href=\"/listUsers/";
-            echo twig_escape_filter($this->env, ((isset($context["page_no"]) ? $context["page_no"] : $this->getContext($context, "page_no")) + 1), "html", null, true);
-            echo "\" class=\"btn btn-default btn-sm\" role=\"button\">Next</a>
-\t\t\t\t\t\t";
+            echo " disabled";
         }
-        // line 55
-        echo "\t\t\t\t\t</div>
+        echo "\" role=\"button\" id=\"next-btn\">Next</a>
+\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -210,7 +199,7 @@ class __TwigTemplate_1b2db2e3ed10ee0771c0a5bb70cf1a8a3929c78861db1339c0fb2f577d2
 \t</body>
 \t</html>";
         
-        $__internal_d50a518968bb84c369734dcf2bc4de25d2f86d2d9cd2d01d97316a6a3858251e->leave($__internal_d50a518968bb84c369734dcf2bc4de25d2f86d2d9cd2d01d97316a6a3858251e_prof);
+        $__internal_9126296f19f15491e4537b9a36b18cfd86071218b4e7ebd1892617e15a9dbfed->leave($__internal_9126296f19f15491e4537b9a36b18cfd86071218b4e7ebd1892617e15a9dbfed_prof);
 
     }
 
@@ -226,7 +215,7 @@ class __TwigTemplate_1b2db2e3ed10ee0771c0a5bb70cf1a8a3929c78861db1339c0fb2f577d2
 
     public function getDebugInfo()
     {
-        return array (  118 => 55,  112 => 53,  108 => 51,  105 => 50,  101 => 48,  95 => 46,  93 => 45,  84 => 38,  73 => 33,  69 => 32,  65 => 31,  61 => 29,  57 => 28,  41 => 15,  30 => 7,  22 => 1,);
+        return array (  101 => 46,  93 => 45,  84 => 38,  73 => 33,  69 => 32,  65 => 31,  61 => 29,  57 => 28,  41 => 15,  30 => 7,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -273,16 +262,8 @@ class __TwigTemplate_1b2db2e3ed10ee0771c0a5bb70cf1a8a3929c78861db1339c0fb2f577d2
 /* 					</div>*/
 /* 					<div class="col-sm-7"></div>*/
 /* 					<div class="col-sm-3">*/
-/* 						{% if page_no > 1 %}*/
-/* 						<a href="/listUsers/{{ (page_no - 1) }}" class="btn btn-default btn-sm" role="button">Prev</a>*/
-/* 						{% else %}*/
-/* 						<a href="#" class="btn btn-default btn-sm disabled" role="button">Prev</a>*/
-/* 						{% endif %}*/
-/* 						{% if all_users|length < 5 %}*/
-/* 						<a href="#" class="btn btn-default btn-sm disabled" role="button">Next</a>*/
-/* 						{% else %}*/
-/* 						<a href="/listUsers/{{ (page_no + 1) }}" class="btn btn-default btn-sm" role="button">Next</a>*/
-/* 						{% endif %}*/
+/* 						<a href="/listUsers/{{ (page_no - 1) }}" class="btn btn-default btn-sm{% if page_no == 1 %} disabled{% endif %}" role="button">Prev</a>*/
+/* 						<a href="/listUsers/{{ (page_no + 1) }}" class="btn btn-default btn-sm{% if all_users|length < 5 %} disabled{% endif %}" role="button" id="next-btn">Next</a>*/
 /* 					</div>*/
 /* 				</div>*/
 /* 			</div>*/
