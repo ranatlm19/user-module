@@ -946,3 +946,9 @@ d96acf,127.0.0.1,POST,http://localhost:8000/searchNewReportingUsers/,1471002748,
 464239,127.0.0.1,POST,http://localhost:8000/searchNewReportingUsers/,1471002754,,200
 ef9a43,127.0.0.1,POST,http://localhost:8000/searchNewReportingUsers/,1471002754,,200
 f7a7b6,127.0.0.1,POST,http://localhost:8000/searchNewReportingUsers/,1471002764,,200
+6ee130,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471006898,,200
+2d76f1,127.0.0.1,POST,http://localhost:8000/getReportingTo/,1471006901,,200
+aeb5c0,127.0.0.1,POST,http://localhost:8000/getReportingFrom/,1471006901,,200
+ffcef1,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471007018,1bd733,200
+1bd733,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471007018,,500
+3c70f6,127.0.0.1,GET,http://localhost:8000/listUsers/1,1471007384,,200
