@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: USER_MODULE
+    database_user: ranatlm19
+    database_password: password123
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 3fa33fbaa1c2675ccb1d3cef88007f83b02eaf40
