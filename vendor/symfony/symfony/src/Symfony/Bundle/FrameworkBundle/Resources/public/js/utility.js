@@ -116,6 +116,7 @@ $(document).ready(function() {
 				}
 			}
 			if(flag && user_id!=-1) {
+				$("#rep-user-list").html("");
 				$.ajax({
 					url: '/addNewRelationship/',
 					type: 'POST',
@@ -168,6 +169,7 @@ $(document).ready(function() {
 				}
 			}
 			if(flag && user_id!=-1) {
+				$("#user-rep-list").html("");
 				$.ajax({
 					url: '/addNewRelationship/',
 					type: 'POST',
